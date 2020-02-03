@@ -49,7 +49,8 @@
         "defuse/php-encryption": "For better performance when doing encryption"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "process-timeout": 0
     },
     "extra": {
         "branch-alias": {
