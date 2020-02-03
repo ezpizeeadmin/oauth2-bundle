@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Tests\Fixtures;
+namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Fixtures;
 
 use DateTime;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\AccessToken;
-use Trikoder\Bundle\OAuth2Bundle\Model\AuthorizationCode;
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
-use Trikoder\Bundle\OAuth2Bundle\Model\Grant;
-use Trikoder\Bundle\OAuth2Bundle\Model\RedirectUri;
-use Trikoder\Bundle\OAuth2Bundle\Model\RefreshToken;
-use Trikoder\Bundle\OAuth2Bundle\Model\Scope;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Model\AccessToken;
+use Ezpizee\Bundle\OAuth2Bundle\Model\AuthorizationCode;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Grant;
+use Ezpizee\Bundle\OAuth2Bundle\Model\RedirectUri;
+use Ezpizee\Bundle\OAuth2Bundle\Model\RefreshToken;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Scope;
 
 /**
  * Development hints:

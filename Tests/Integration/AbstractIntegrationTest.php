@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Tests\Integration;
+namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Integration;
 
 use DateInterval;
 use Defuse\Crypto\Crypto;
@@ -28,28 +28,28 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use Trikoder\Bundle\OAuth2Bundle\Converter\ScopeConverter;
-use Trikoder\Bundle\OAuth2Bundle\Converter\UserConverter;
-use Trikoder\Bundle\OAuth2Bundle\League\Entity\User;
-use Trikoder\Bundle\OAuth2Bundle\League\Repository\AccessTokenRepository;
-use Trikoder\Bundle\OAuth2Bundle\League\Repository\AuthCodeRepository;
-use Trikoder\Bundle\OAuth2Bundle\League\Repository\ClientRepository;
-use Trikoder\Bundle\OAuth2Bundle\League\Repository\RefreshTokenRepository;
-use Trikoder\Bundle\OAuth2Bundle\League\Repository\ScopeRepository;
-use Trikoder\Bundle\OAuth2Bundle\League\Repository\UserRepository;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\InMemory\AccessTokenManager;
-use Trikoder\Bundle\OAuth2Bundle\Manager\InMemory\AuthorizationCodeManager;
-use Trikoder\Bundle\OAuth2Bundle\Manager\InMemory\ClientManager;
-use Trikoder\Bundle\OAuth2Bundle\Manager\InMemory\RefreshTokenManager;
-use Trikoder\Bundle\OAuth2Bundle\Manager\InMemory\ScopeManager;
-use Trikoder\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\AccessToken;
-use Trikoder\Bundle\OAuth2Bundle\Model\RefreshToken;
-use Trikoder\Bundle\OAuth2Bundle\Tests\TestHelper;
+use Ezpizee\Bundle\OAuth2Bundle\Converter\ScopeConverter;
+use Ezpizee\Bundle\OAuth2Bundle\Converter\UserConverter;
+use Ezpizee\Bundle\OAuth2Bundle\League\Entity\User;
+use Ezpizee\Bundle\OAuth2Bundle\League\Repository\AccessTokenRepository;
+use Ezpizee\Bundle\OAuth2Bundle\League\Repository\AuthCodeRepository;
+use Ezpizee\Bundle\OAuth2Bundle\League\Repository\ClientRepository;
+use Ezpizee\Bundle\OAuth2Bundle\League\Repository\RefreshTokenRepository;
+use Ezpizee\Bundle\OAuth2Bundle\League\Repository\ScopeRepository;
+use Ezpizee\Bundle\OAuth2Bundle\League\Repository\UserRepository;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\InMemory\AccessTokenManager;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\InMemory\AuthorizationCodeManager;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\InMemory\ClientManager;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\InMemory\RefreshTokenManager;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\InMemory\ScopeManager;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Model\AccessToken;
+use Ezpizee\Bundle\OAuth2Bundle\Model\RefreshToken;
+use Ezpizee\Bundle\OAuth2Bundle\Tests\TestHelper;
 
 abstract class AbstractIntegrationTest extends TestCase
 {

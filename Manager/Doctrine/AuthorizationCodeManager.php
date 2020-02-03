@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine;
+namespace Ezpizee\Bundle\OAuth2Bundle\Manager\Doctrine;
 
 use Doctrine\ORM\EntityManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\AuthorizationCode;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Model\AuthorizationCode;
 
 final class AuthorizationCodeManager implements AuthorizationCodeManagerInterface
 {

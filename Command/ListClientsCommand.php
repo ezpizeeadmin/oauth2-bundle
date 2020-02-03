@@ -2,25 +2,25 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Command;
+namespace Ezpizee\Bundle\OAuth2Bundle\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientFilter;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
-use Trikoder\Bundle\OAuth2Bundle\Model\Grant;
-use Trikoder\Bundle\OAuth2Bundle\Model\RedirectUri;
-use Trikoder\Bundle\OAuth2Bundle\Model\Scope;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientFilter;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Grant;
+use Ezpizee\Bundle\OAuth2Bundle\Model\RedirectUri;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Scope;
 
 final class ListClientsCommand extends Command
 {
     private const ALLOWED_COLUMNS = ['identifier', 'secret', 'scope', 'redirect uri', 'grant type'];
 
-    protected static $defaultName = 'trikoder:oauth2:list-clients';
+    protected static $defaultName = 'ezpizee:oauth2:list-clients';
 
     /**
      * @var ClientManagerInterface

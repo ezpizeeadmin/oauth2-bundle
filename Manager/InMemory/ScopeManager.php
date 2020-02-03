@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Manager\InMemory;
+namespace Ezpizee\Bundle\OAuth2Bundle\Manager\InMemory;
 
-use Trikoder\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\Scope;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Scope;
 
 final class ScopeManager implements ScopeManagerInterface
 {

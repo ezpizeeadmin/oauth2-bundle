@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Manager;
+namespace Ezpizee\Bundle\OAuth2Bundle\Manager;
 
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
 
 interface ClientManagerInterface
 {

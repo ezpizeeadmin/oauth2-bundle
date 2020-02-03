@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Tests\Unit;
+namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Unit;
 
 use League\OAuth2\Server\AuthorizationServer;
 use League\OAuth2\Server\Grant\ClientCredentialsGrant;
@@ -10,9 +10,9 @@ use League\OAuth2\Server\Grant\PasswordGrant;
 use League\OAuth2\Server\Grant\RefreshTokenGrant;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Trikoder\Bundle\OAuth2Bundle\DependencyInjection\TrikoderOAuth2Extension;
-use Trikoder\Bundle\OAuth2Bundle\Manager\InMemory\ScopeManager;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\DependencyInjection\EzpizeeOAuth2Extension;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\InMemory\ScopeManager;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
 
 final class ExtensionTest extends TestCase
 {
@@ -25,7 +25,7 @@ final class ExtensionTest extends TestCase
 
         $this->setupContainer($container);
 
-        $extension = new TrikoderOAuth2Extension();
+        $extension = new EzpizeeOAuth2Extension();
 
         $extension->load($this->getValidConfiguration([$grantKey => $shouldTheGrantBeEnabled]), $container);
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\League\Entity;
+namespace Ezpizee\Bundle\OAuth2Bundle\League\Entity;
 
 use League\OAuth2\Server\Entities\AuthCodeEntityInterface;
 use League\OAuth2\Server\Entities\Traits\AuthCodeTrait;

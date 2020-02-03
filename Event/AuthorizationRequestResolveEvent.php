@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Event;
+namespace Ezpizee\Bundle\OAuth2Bundle\Event;
 
 use League\OAuth2\Server\RequestTypes\AuthorizationRequest;
 use LogicException;
 use Psr\Http\Message\ResponseInterface;
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
-use Trikoder\Bundle\OAuth2Bundle\Model\Scope;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Scope;
 
 final class AuthorizationRequestResolveEvent extends Event
 {

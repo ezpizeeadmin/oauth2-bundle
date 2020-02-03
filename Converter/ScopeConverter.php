@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Converter;
+namespace Ezpizee\Bundle\OAuth2Bundle\Converter;
 
-use Trikoder\Bundle\OAuth2Bundle\League\Entity\Scope as ScopeEntity;
-use Trikoder\Bundle\OAuth2Bundle\Model\Scope as ScopeModel;
+use Ezpizee\Bundle\OAuth2Bundle\League\Entity\Scope as ScopeEntity;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Scope as ScopeModel;
 
 final class ScopeConverter implements ScopeConverterInterface
 {

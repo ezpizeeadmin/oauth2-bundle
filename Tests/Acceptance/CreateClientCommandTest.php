@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Tests\Acceptance;
+namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Acceptance;
 
 use Symfony\Component\Console\Tester\CommandTester;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
 
 final class CreateClientCommandTest extends AbstractAcceptanceTest
 {
     public function testCreateClient(): void
     {
-        $command = $this->application->find('trikoder:oauth2:create-client');
+        $command = $this->application->find('ezpizee:oauth2:create-client');
         $commandTester = new CommandTester($command);
         $commandTester->execute([
             'command' => $command->getName(),
@@ -24,7 +24,7 @@ final class CreateClientCommandTest extends AbstractAcceptanceTest
 
     public function testCreateClientWithIdentifier(): void
     {
-        $command = $this->application->find('trikoder:oauth2:create-client');
+        $command = $this->application->find('ezpizee:oauth2:create-client');
         $commandTester = new CommandTester($command);
         $commandTester->execute([
             'command' => $command->getName(),
@@ -44,7 +44,7 @@ final class CreateClientCommandTest extends AbstractAcceptanceTest
 
     public function testCreateClientWithSecret(): void
     {
-        $command = $this->application->find('trikoder:oauth2:create-client');
+        $command = $this->application->find('ezpizee:oauth2:create-client');
         $commandTester = new CommandTester($command);
         $commandTester->execute([
             'command' => $command->getName(),
@@ -64,7 +64,7 @@ final class CreateClientCommandTest extends AbstractAcceptanceTest
 
     public function testCreateClientWithRedirectUris(): void
     {
-        $command = $this->application->find('trikoder:oauth2:create-client');
+        $command = $this->application->find('ezpizee:oauth2:create-client');
         $commandTester = new CommandTester($command);
         $commandTester->execute([
             'command' => $command->getName(),
@@ -84,7 +84,7 @@ final class CreateClientCommandTest extends AbstractAcceptanceTest
 
     public function testCreateClientWithGrantTypes(): void
     {
-        $command = $this->application->find('trikoder:oauth2:create-client');
+        $command = $this->application->find('ezpizee:oauth2:create-client');
         $commandTester = new CommandTester($command);
         $commandTester->execute([
             'command' => $command->getName(),
@@ -104,7 +104,7 @@ final class CreateClientCommandTest extends AbstractAcceptanceTest
 
     public function testCreateClientWithScopes(): void
     {
-        $command = $this->application->find('trikoder:oauth2:create-client');
+        $command = $this->application->find('ezpizee:oauth2:create-client');
         $commandTester = new CommandTester($command);
         $commandTester->execute([
             'command' => $command->getName(),

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine;
+namespace Ezpizee\Bundle\OAuth2Bundle\Manager\Doctrine;
 
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\AccessToken;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Model\AccessToken;
 
 final class AccessTokenManager implements AccessTokenManagerInterface
 {

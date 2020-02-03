@@ -1,9 +1,9 @@
-# Trikoder OAuth 2 Bundle
+# Ezpizee OAuth 2 Bundle
 
-[![Build Status](https://travis-ci.org/trikoder/oauth2-bundle.svg?branch=master)](https://travis-ci.org/trikoder/oauth2-bundle)
-[![Latest Stable Version](https://poser.pugx.org/trikoder/oauth2-bundle/v/stable)](https://packagist.org/packages/trikoder/oauth2-bundle)
-[![License](https://poser.pugx.org/trikoder/oauth2-bundle/license)](https://packagist.org/packages/trikoder/oauth2-bundle)
-[![Code coverage](https://codecov.io/gh/trikoder/oauth2-bundle/branch/master/graph/badge.svg)](https://codecov.io/gh/trikoder/oauth2-bundle)
+[![Build Status](https://travis-ci.org/ezpizee/oauth2-bundle.svg?branch=master)](https://travis-ci.org/ezpizee/oauth2-bundle)
+[![Latest Stable Version](https://poser.pugx.org/ezpizee/oauth2-bundle/v/stable)](https://packagist.org/packages/ezpizee/oauth2-bundle)
+[![License](https://poser.pugx.org/ezpizee/oauth2-bundle/license)](https://packagist.org/packages/ezpizee/oauth2-bundle)
+[![Code coverage](https://codecov.io/gh/ezpizee/oauth2-bundle/branch/master/graph/badge.svg)](https://codecov.io/gh/ezpizee/oauth2-bundle)
 
 Symfony bundle which provides OAuth 2.0 authorization/resource server capabilities. The authorization and resource server actors are implemented using the [thephpleague/oauth2-server](https://github.com/thephpleague/oauth2-server) library.
 
@@ -34,17 +34,17 @@ This package is currently in the active development.
 1. Require the bundle and a PSR 7/17 implementation with Composer:
 
     ```sh
-    composer require trikoder/oauth2-bundle nyholm/psr7
+    composer require ezpizee/oauth2-bundle nyholm/psr7
     ```
 
     If your project is managed using [Symfony Flex](https://github.com/symfony/flex), the rest of the steps are not required. Just follow the post-installation instructions instead! :tada:
 
     > **NOTE:** This bundle requires a PSR 7/17 implementation to operate. We recommend that you use [nyholm/psr7](https://github.com/Nyholm/psr7). Check out this [document](docs/psr-implementation-switching.md) if you wish to use a different implementation.
 
-1. Create the bundle configuration file under `config/packages/trikoder_oauth2.yaml`. Here is a reference configuration file:
+1. Create the bundle configuration file under `config/packages/ezpizee_oauth2.yaml`. Here is a reference configuration file:
 
     ```yaml
-    trikoder_oauth2:
+    ezpizee_oauth2:
         authorization_server: # Required
 
             # Full path to the private key file.
@@ -116,7 +116,7 @@ This package is currently in the active development.
 1. Enable the bundle in `config/bundles.php` by adding it to the array:
 
     ```php
-    Trikoder\Bundle\OAuth2Bundle\TrikoderOAuth2Bundle::class => ['all' => true]
+    Ezpizee\Bundle\OAuth2Bundle\EzpizeeOAuth2Bundle::class => ['all' => true]
     ```
 
 1. Update the database so bundle entities can be persisted using Doctrine:
@@ -129,7 +129,7 @@ This package is currently in the active development.
 
     ```yaml
     oauth2:
-        resource: '@TrikoderOAuth2Bundle/Resources/config/routes.xml'
+        resource: '@EzpizeeOAuth2Bundle/Resources/config/routes.xml'
     ```
 
 You can verify that everything is working by issuing a `POST` request to the `/token` endpoint.
@@ -202,7 +202,7 @@ All the package releases are recorded in the [CHANGELOG](CHANGELOG.md) file.
 
 ## Reporting issues
 
-Use the [issue tracker](https://github.com/trikoder/oauth2-bundle/issues) to report any issues you might have.
+Use the [issue tracker](https://github.com/ezpizee/oauth2-bundle/issues) to report any issues you might have.
 
 ## License
 

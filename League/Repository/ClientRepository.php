@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\League\Repository;
+namespace Ezpizee\Bundle\OAuth2Bundle\League\Repository;
 
 use League\OAuth2\Server\Repositories\ClientRepositoryInterface;
-use Trikoder\Bundle\OAuth2Bundle\League\Entity\Client as ClientEntity;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\Client as ClientModel;
+use Ezpizee\Bundle\OAuth2Bundle\League\Entity\Client as ClientEntity;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Client as ClientModel;
 
 final class ClientRepository implements ClientRepositoryInterface
 {

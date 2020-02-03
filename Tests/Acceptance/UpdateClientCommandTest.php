@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Tests\Acceptance;
+namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Acceptance;
 
 use Symfony\Component\Console\Tester\CommandTester;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
 
 final class UpdateClientCommandTest extends AbstractAcceptanceTest
 {
@@ -16,7 +16,7 @@ final class UpdateClientCommandTest extends AbstractAcceptanceTest
         $this->getClientManager()->save($client);
         $this->assertCount(0, $client->getRedirectUris());
 
-        $command = $this->application->find('trikoder:oauth2:update-client');
+        $command = $this->application->find('ezpizee:oauth2:update-client');
         $commandTester = new CommandTester($command);
         $commandTester->execute([
             'command' => $command->getName(),
@@ -34,7 +34,7 @@ final class UpdateClientCommandTest extends AbstractAcceptanceTest
         $this->getClientManager()->save($client);
         $this->assertCount(0, $client->getGrants());
 
-        $command = $this->application->find('trikoder:oauth2:update-client');
+        $command = $this->application->find('ezpizee:oauth2:update-client');
         $commandTester = new CommandTester($command);
         $commandTester->execute([
             'command' => $command->getName(),
@@ -52,7 +52,7 @@ final class UpdateClientCommandTest extends AbstractAcceptanceTest
         $this->getClientManager()->save($client);
         $this->assertCount(0, $client->getScopes());
 
-        $command = $this->application->find('trikoder:oauth2:update-client');
+        $command = $this->application->find('ezpizee:oauth2:update-client');
         $commandTester = new CommandTester($command);
         $commandTester->execute([
             'command' => $command->getName(),
@@ -70,7 +70,7 @@ final class UpdateClientCommandTest extends AbstractAcceptanceTest
         $this->getClientManager()->save($client);
         $this->assertTrue($client->isActive());
 
-        $command = $this->application->find('trikoder:oauth2:update-client');
+        $command = $this->application->find('ezpizee:oauth2:update-client');
         $commandTester = new CommandTester($command);
         $commandTester->execute([
             'command' => $command->getName(),

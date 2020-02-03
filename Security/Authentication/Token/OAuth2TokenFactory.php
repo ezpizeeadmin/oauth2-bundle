@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Security\Authentication\Token;
+namespace Ezpizee\Bundle\OAuth2Bundle\Security\Authentication\Token;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Symfony\Component\Security\Core\User\UserInterface;

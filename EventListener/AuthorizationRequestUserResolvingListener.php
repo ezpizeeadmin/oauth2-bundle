@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\EventListener;
+namespace Ezpizee\Bundle\OAuth2Bundle\EventListener;
 
 use Symfony\Component\Security\Core\Security;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Trikoder\Bundle\OAuth2Bundle\Event\AuthorizationRequestResolveEvent;
+use Ezpizee\Bundle\OAuth2Bundle\Event\AuthorizationRequestResolveEvent;
 
 /**
  * Listener sets currently authenticated user to authorization request context

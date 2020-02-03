@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Model;
+namespace Ezpizee\Bundle\OAuth2Bundle\Model;
 
 use RuntimeException;
-use Trikoder\Bundle\OAuth2Bundle\OAuth2Grants;
+use Ezpizee\Bundle\OAuth2Bundle\OAuth2Grants;
 
 class Grant
 {

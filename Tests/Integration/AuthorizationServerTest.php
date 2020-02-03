@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Tests\Integration;
+namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Integration;
 
 use DateTime;
-use Trikoder\Bundle\OAuth2Bundle\Event\UserResolveEvent;
-use Trikoder\Bundle\OAuth2Bundle\Model\AccessToken;
-use Trikoder\Bundle\OAuth2Bundle\Model\RefreshToken;
-use Trikoder\Bundle\OAuth2Bundle\Tests\Fixtures\FixtureFactory;
-use Trikoder\Bundle\OAuth2Bundle\Tests\TestHelper;
+use Ezpizee\Bundle\OAuth2Bundle\Event\UserResolveEvent;
+use Ezpizee\Bundle\OAuth2Bundle\Model\AccessToken;
+use Ezpizee\Bundle\OAuth2Bundle\Model\RefreshToken;
+use Ezpizee\Bundle\OAuth2Bundle\Tests\Fixtures\FixtureFactory;
+use Ezpizee\Bundle\OAuth2Bundle\Tests\TestHelper;
 
 final class AuthorizationServerTest extends AbstractIntegrationTest
 {
@@ -290,7 +290,7 @@ final class AuthorizationServerTest extends AbstractIntegrationTest
 
     public function testValidPasswordGrant(): void
     {
-        $this->eventDispatcher->addListener('trikoder.oauth2.user_resolve', function (UserResolveEvent $event): void {
+        $this->eventDispatcher->addListener('ezpizee.oauth2.user_resolve', function (UserResolveEvent $event): void {
             $event->setUser(FixtureFactory::createUser());
         });
 
@@ -326,7 +326,7 @@ final class AuthorizationServerTest extends AbstractIntegrationTest
 
     public function testInvalidCredentialsPasswordGrant(): void
     {
-        $this->eventDispatcher->addListener('trikoder.oauth2.user_resolve', function (UserResolveEvent $event): void {
+        $this->eventDispatcher->addListener('ezpizee.oauth2.user_resolve', function (UserResolveEvent $event): void {
             $event->setUser(null);
         });
 

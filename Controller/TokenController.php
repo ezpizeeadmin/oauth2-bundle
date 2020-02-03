@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Controller;
+namespace Ezpizee\Bundle\OAuth2Bundle\Controller;
 
 use League\OAuth2\Server\AuthorizationServer;
 use League\OAuth2\Server\Exception\OAuthServerException;

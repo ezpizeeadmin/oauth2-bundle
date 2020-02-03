@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Tests\Acceptance;
+namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Acceptance;
 
 use DateTime;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Tester\CommandTester;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Tests\Fixtures\FixtureFactory;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Tests\Fixtures\FixtureFactory;
 
 final class ClearExpiredTokensCommandTest extends AbstractAcceptanceTest
 {
@@ -107,6 +107,6 @@ final class ClearExpiredTokensCommandTest extends AbstractAcceptanceTest
 
     private function command(): Command
     {
-        return $this->application->find('trikoder:oauth2:clear-expired-tokens');
+        return $this->application->find('ezpizee:oauth2:clear-expired-tokens');
     }
 }

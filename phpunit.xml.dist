@@ -9,7 +9,7 @@
          failOnWarning="true"
 >
     <php>
-        <env name="KERNEL_CLASS" value="Trikoder\Bundle\OAuth2Bundle\Tests\TestKernel" />
+        <env name="KERNEL_CLASS" value="Ezpizee\Bundle\OAuth2Bundle\Tests\TestKernel" />
         <env name="SHELL_VERBOSITY" value="-1" />
         <env name="SYMFONY_DEPRECATIONS_HELPER" value="max[self]=0" />
     </php>

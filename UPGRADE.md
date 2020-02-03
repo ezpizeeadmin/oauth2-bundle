@@ -5,11 +5,11 @@ Here you will find upgrade steps between major releases.
 
 ### PSR-7/17 HTTP transport implementation
 
-The bundle removed a direct dependency on the [zendframework/zend-diactoros](https://github.com/zendframework/zend-diactoros) package. You now need to explicitly install a PSR 7/17 implementation. We recommand that you use [nyholm/psr7](https://github.com/Nyholm/psr7). Check out this [document](https://github.com/trikoder/oauth2-bundle/blob/v2.0.0/docs/psr-implementation-switching.md) if you wish to use a different implementation.
+The bundle removed a direct dependency on the [zendframework/zend-diactoros](https://github.com/zendframework/zend-diactoros) package. You now need to explicitly install a PSR 7/17 implementation. We recommand that you use [nyholm/psr7](https://github.com/Nyholm/psr7). Check out this [document](https://github.com/ezpizee/oauth2-bundle/blob/v2.0.0/docs/psr-implementation-switching.md) if you wish to use a different implementation.
 
 ### Scope resolving changes
 
-Previously [documented](https://github.com/trikoder/oauth2-bundle/blob/v1.1.0/docs/controlling-token-scopes.md) client scope inheriting and restricting is now the new default behavior. You can safely remove the listener from your project.
+Previously [documented](https://github.com/ezpizee/oauth2-bundle/blob/v1.1.0/docs/controlling-token-scopes.md) client scope inheriting and restricting is now the new default behavior. You can safely remove the listener from your project.
 
 ### SQL schema changes
 
@@ -28,15 +28,15 @@ The schema changes include:
 
 The following interfaces have been changed:
 
-#### `Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface`
+#### `Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface`
 
-- [Added the remove() method](https://github.com/trikoder/oauth2-bundle/blob/v2.0.0/Manager/ClientManagerInterface.php#L15)
-- [Added the list() method](https://github.com/trikoder/oauth2-bundle/blob/v2.0.0/Manager/ClientManagerInterface.php#L20)
+- [Added the remove() method](https://github.com/ezpizee/oauth2-bundle/blob/v2.0.0/Manager/ClientManagerInterface.php#L15)
+- [Added the list() method](https://github.com/ezpizee/oauth2-bundle/blob/v2.0.0/Manager/ClientManagerInterface.php#L20)
 
-#### `Trikoder\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface`
+#### `Ezpizee\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface`
 
-- [Added the clearExpired() method](https://github.com/trikoder/oauth2-bundle/blob/v2.0.0/Manager/AccessTokenManagerInterface.php#L15)
+- [Added the clearExpired() method](https://github.com/ezpizee/oauth2-bundle/blob/v2.0.0/Manager/AccessTokenManagerInterface.php#L15)
 
-#### `Trikoder\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface`
+#### `Ezpizee\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface`
 
-- [Added the clearExpired() method](https://github.com/trikoder/oauth2-bundle/blob/v2.0.0/Manager/RefreshTokenManagerInterface.php#L15)
+- [Added the clearExpired() method](https://github.com/ezpizee/oauth2-bundle/blob/v2.0.0/Manager/RefreshTokenManagerInterface.php#L15)

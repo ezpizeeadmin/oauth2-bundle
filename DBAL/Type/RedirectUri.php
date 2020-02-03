@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\DBAL\Type;
+namespace Ezpizee\Bundle\OAuth2Bundle\DBAL\Type;
 
-use Trikoder\Bundle\OAuth2Bundle\Model\RedirectUri as RedirectUriModel;
+use Ezpizee\Bundle\OAuth2Bundle\Model\RedirectUri as RedirectUriModel;
 
 final class RedirectUri extends ImplodedArray
 {

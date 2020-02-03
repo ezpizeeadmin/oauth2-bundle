@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Model;
+namespace Ezpizee\Bundle\OAuth2Bundle\Model;
 
 class Scope
 {

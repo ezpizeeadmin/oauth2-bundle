@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\DBAL\Type;
+namespace Ezpizee\Bundle\OAuth2Bundle\DBAL\Type;
 
-use Trikoder\Bundle\OAuth2Bundle\Model\Grant as GrantModel;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Grant as GrantModel;
 
 final class Grant extends ImplodedArray
 {

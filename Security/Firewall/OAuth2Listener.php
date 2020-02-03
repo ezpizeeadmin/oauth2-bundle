@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Security\Firewall;
+namespace Ezpizee\Bundle\OAuth2Bundle\Security\Firewall;
 
 use Symfony\Bridge\PsrHttpMessage\HttpMessageFactoryInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -11,10 +11,10 @@ use Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterfac
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Http\Firewall\ListenerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2Token;
-use Trikoder\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2TokenFactory;
-use Trikoder\Bundle\OAuth2Bundle\Security\Exception\InsufficientScopesException;
-use Trikoder\Bundle\OAuth2Bundle\Security\Exception\Oauth2AuthenticationFailedException;
+use Ezpizee\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2Token;
+use Ezpizee\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2TokenFactory;
+use Ezpizee\Bundle\OAuth2Bundle\Security\Exception\InsufficientScopesException;
+use Ezpizee\Bundle\OAuth2Bundle\Security\Exception\Oauth2AuthenticationFailedException;
 
 final class OAuth2Listener implements ListenerInterface
 {

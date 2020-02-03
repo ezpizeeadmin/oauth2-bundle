@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Manager;
+namespace Ezpizee\Bundle\OAuth2Bundle\Manager;
 
-use Trikoder\Bundle\OAuth2Bundle\Model\Grant;
-use Trikoder\Bundle\OAuth2Bundle\Model\RedirectUri;
-use Trikoder\Bundle\OAuth2Bundle\Model\Scope;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Grant;
+use Ezpizee\Bundle\OAuth2Bundle\Model\RedirectUri;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Scope;
 
 final class ClientFilter
 {

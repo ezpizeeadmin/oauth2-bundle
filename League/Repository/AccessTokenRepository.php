@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\League\Repository;
+namespace Ezpizee\Bundle\OAuth2Bundle\League\Repository;
 
 use League\OAuth2\Server\Entities\AccessTokenEntityInterface;
 use League\OAuth2\Server\Entities\ClientEntityInterface;
 use League\OAuth2\Server\Exception\UniqueTokenIdentifierConstraintViolationException;
 use League\OAuth2\Server\Repositories\AccessTokenRepositoryInterface;
-use Trikoder\Bundle\OAuth2Bundle\Converter\ScopeConverterInterface;
-use Trikoder\Bundle\OAuth2Bundle\League\Entity\AccessToken as AccessTokenEntity;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\AccessToken as AccessTokenModel;
+use Ezpizee\Bundle\OAuth2Bundle\Converter\ScopeConverterInterface;
+use Ezpizee\Bundle\OAuth2Bundle\League\Entity\AccessToken as AccessTokenEntity;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Model\AccessToken as AccessTokenModel;
 
 final class AccessTokenRepository implements AccessTokenRepositoryInterface
 {

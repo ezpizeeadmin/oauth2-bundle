@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\DependencyInjection;
+namespace Ezpizee\Bundle\OAuth2Bundle\DependencyInjection;
 
 use DateInterval;
 use Defuse\Crypto\Key;
@@ -28,19 +28,19 @@ use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\HttpKernel\KernelEvents;
-use Trikoder\Bundle\OAuth2Bundle\DBAL\Type\Grant as GrantType;
-use Trikoder\Bundle\OAuth2Bundle\DBAL\Type\RedirectUri as RedirectUriType;
-use Trikoder\Bundle\OAuth2Bundle\DBAL\Type\Scope as ScopeType;
-use Trikoder\Bundle\OAuth2Bundle\EventListener\ConvertExceptionToResponseListener;
-use Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\AccessTokenManager;
-use Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\AuthorizationCodeManager;
-use Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\ClientManager;
-use Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\RefreshTokenManager;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\Scope as ScopeModel;
-use Trikoder\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2TokenFactory;
+use Ezpizee\Bundle\OAuth2Bundle\DBAL\Type\Grant as GrantType;
+use Ezpizee\Bundle\OAuth2Bundle\DBAL\Type\RedirectUri as RedirectUriType;
+use Ezpizee\Bundle\OAuth2Bundle\DBAL\Type\Scope as ScopeType;
+use Ezpizee\Bundle\OAuth2Bundle\EventListener\ConvertExceptionToResponseListener;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\Doctrine\AccessTokenManager;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\Doctrine\AuthorizationCodeManager;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\Doctrine\ClientManager;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\Doctrine\RefreshTokenManager;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Scope as ScopeModel;
+use Ezpizee\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2TokenFactory;
 
-final class TrikoderOAuth2Extension extends Extension implements PrependExtensionInterface, CompilerPassInterface
+final class EzpizeeOAuth2Extension extends Extension implements PrependExtensionInterface, CompilerPassInterface
 {
     /**
      * {@inheritdoc}
@@ -73,7 +73,7 @@ final class TrikoderOAuth2Extension extends Extension implements PrependExtensio
      */
     public function getAlias()
     {
-        return 'trikoder_oauth2';
+        return 'ezpizee_oauth2';
     }
 
     /**
@@ -136,9 +136,9 @@ final class TrikoderOAuth2Extension extends Extension implements PrependExtensio
             $keyDefinition = (new Definition(Key::class))
                 ->setFactory([Key::class, 'loadFromAsciiSafeString'])
                 ->addArgument($config['encryption_key']);
-            $container->setDefinition('trikoder.oauth2.defuse_key', $keyDefinition);
+            $container->setDefinition('ezpizee.oauth2.defuse_key', $keyDefinition);
 
-            $authorizationServer->replaceArgument('$encryptionKey', new Reference('trikoder.oauth2.defuse_key'));
+            $authorizationServer->replaceArgument('$encryptionKey', new Reference('ezpizee.oauth2.defuse_key'));
         }
 
         if ($config['enable_client_credentials_grant']) {
@@ -258,13 +258,13 @@ final class TrikoderOAuth2Extension extends Extension implements PrependExtensio
             ->replaceArgument('$entityManager', $entityManager)
         ;
 
-        $container->setParameter('trikoder.oauth2.persistence.doctrine.enabled', true);
-        $container->setParameter('trikoder.oauth2.persistence.doctrine.manager', $entityManagerName);
+        $container->setParameter('ezpizee.oauth2.persistence.doctrine.enabled', true);
+        $container->setParameter('ezpizee.oauth2.persistence.doctrine.manager', $entityManagerName);
     }
 
     private function configureInMemoryPersistence(ContainerBuilder $container): void
     {
-        $container->setParameter('trikoder.oauth2.persistence.in_memory.enabled', true);
+        $container->setParameter('ezpizee.oauth2.persistence.in_memory.enabled', true);
     }
 
     private function configureResourceServer(ContainerBuilder $container, array $config): void

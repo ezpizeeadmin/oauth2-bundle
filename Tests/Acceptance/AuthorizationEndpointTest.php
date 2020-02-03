@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Tests\Acceptance;
+namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Acceptance;
 
 use DateTime;
-use Trikoder\Bundle\OAuth2Bundle\Event\AuthorizationRequestResolveEvent;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\OAuth2Events;
-use Trikoder\Bundle\OAuth2Bundle\Tests\Fixtures\FixtureFactory;
+use Ezpizee\Bundle\OAuth2Bundle\Event\AuthorizationRequestResolveEvent;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\OAuth2Events;
+use Ezpizee\Bundle\OAuth2Bundle\Tests\Fixtures\FixtureFactory;
 use Zend\Diactoros\Response;
 
 final class AuthorizationEndpointTest extends AbstractAcceptanceTest

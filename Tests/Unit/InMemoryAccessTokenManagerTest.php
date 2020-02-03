@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Tests\Unit;
+namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Unit;
 
 use DateTime;
 use PHPUnit\Framework\TestCase;
 use ReflectionProperty;
-use Trikoder\Bundle\OAuth2Bundle\Manager\InMemory\AccessTokenManager as InMemoryAccessTokenManager;
-use Trikoder\Bundle\OAuth2Bundle\Model\AccessToken;
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\InMemory\AccessTokenManager as InMemoryAccessTokenManager;
+use Ezpizee\Bundle\OAuth2Bundle\Model\AccessToken;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
 
 final class InMemoryAccessTokenManagerTest extends TestCase
 {

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Tests\Acceptance;
+namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Acceptance;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Tester\CommandTester;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
-use Trikoder\Bundle\OAuth2Bundle\Model\RedirectUri;
-use Trikoder\Bundle\OAuth2Bundle\Model\Scope;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
+use Ezpizee\Bundle\OAuth2Bundle\Model\RedirectUri;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Scope;
 
 final class ListClientsCommandTest extends AbstractAcceptanceTest
 {
@@ -138,6 +138,6 @@ TABLE;
 
     private function command(): Command
     {
-        return $this->application->find('trikoder:oauth2:list-clients');
+        return $this->application->find('ezpizee:oauth2:list-clients');
     }
 }

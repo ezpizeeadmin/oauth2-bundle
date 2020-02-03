@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Tests\Support;
+namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Support;
 
 use Doctrine\DBAL\Platforms\SqlitePlatform as DoctrineSqlitePlatform;
 use Doctrine\DBAL\Schema\ForeignKeyConstraint;

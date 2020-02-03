@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Manager\InMemory;
+namespace Ezpizee\Bundle\OAuth2Bundle\Manager\InMemory;
 
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientFilter;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientFilter;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
 
 final class ClientManager implements ClientManagerInterface
 {

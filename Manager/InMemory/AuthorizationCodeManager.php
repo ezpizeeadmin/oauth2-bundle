@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Manager\InMemory;
+namespace Ezpizee\Bundle\OAuth2Bundle\Manager\InMemory;
 
-use Trikoder\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\AuthorizationCode;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Model\AuthorizationCode;
 
 final class AuthorizationCodeManager implements AuthorizationCodeManagerInterface
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\DependencyInjection;
+namespace Ezpizee\Bundle\OAuth2Bundle\DependencyInjection;
 
 use Defuse\Crypto\Key;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;
@@ -16,7 +16,7 @@ final class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = $this->getWrappedTreeBuilder('trikoder_oauth2');
+        $treeBuilder = $this->getWrappedTreeBuilder('ezpizee_oauth2');
         $rootNode = $treeBuilder->getRootNode();
 
         $rootNode->append($this->createAuthorizationServerNode());

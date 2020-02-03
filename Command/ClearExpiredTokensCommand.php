@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Command;
+namespace Ezpizee\Bundle\OAuth2Bundle\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
 
 final class ClearExpiredTokensCommand extends Command
 {
-    protected static $defaultName = 'trikoder:oauth2:clear-expired-tokens';
+    protected static $defaultName = 'ezpizee:oauth2:clear-expired-tokens';
 
     /**
      * @var AccessTokenManagerInterface

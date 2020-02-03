@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\DependencyInjection\Security;
+namespace Ezpizee\Bundle\OAuth2Bundle\DependencyInjection\Security;
 
 use Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;
 use Symfony\Component\DependencyInjection\ChildDefinition;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
-use Trikoder\Bundle\OAuth2Bundle\Security\Authentication\Provider\OAuth2Provider;
-use Trikoder\Bundle\OAuth2Bundle\Security\EntryPoint\OAuth2EntryPoint;
-use Trikoder\Bundle\OAuth2Bundle\Security\Firewall\OAuth2Listener;
+use Ezpizee\Bundle\OAuth2Bundle\Security\Authentication\Provider\OAuth2Provider;
+use Ezpizee\Bundle\OAuth2Bundle\Security\EntryPoint\OAuth2EntryPoint;
+use Ezpizee\Bundle\OAuth2Bundle\Security\Firewall\OAuth2Listener;
 
 final class OAuth2Factory implements SecurityFactoryInterface
 {

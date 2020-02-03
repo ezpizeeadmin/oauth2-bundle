@@ -1,6 +1,6 @@
 # Password grant handling
 
-The `password` grant issues access and refresh tokens that are bound to both a client and a user within your application. As user system implementations can differ greatly on an application basis, the `trikoder.oauth2.user_resolve` was created which allows you to decide which user you want to bind to issuing tokens.
+The `password` grant issues access and refresh tokens that are bound to both a client and a user within your application. As user system implementations can differ greatly on an application basis, the `ezpizee.oauth2.user_resolve` was created which allows you to decide which user you want to bind to issuing tokens.
 
 ## Requirements
 
@@ -17,7 +17,7 @@ namespace App\EventListener;
 
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
-use Trikoder\Bundle\OAuth2Bundle\Event\UserResolveEvent;
+use Ezpizee\Bundle\OAuth2Bundle\Event\UserResolveEvent;
 
 final class UserResolveListener
 {
@@ -69,7 +69,7 @@ App\EventListener\UserResolveListener:
         - '@app.repository.user_repository'
         - '@security.password_encoder'
     tags:
-        - { name: kernel.event_listener, event: trikoder.oauth2.user_resolve, method: onUserResolve }
+        - { name: kernel.event_listener, event: ezpizee.oauth2.user_resolve, method: onUserResolve }
 ```
 
 > **NOTE:** The first dependency in this example should be any service class that implements the `UserProviderInterface` interface.

@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Command;
+namespace Ezpizee\Bundle\OAuth2Bundle\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
 
 final class DeleteClientCommand extends Command
 {
-    protected static $defaultName = 'trikoder:oauth2:delete-client';
+    protected static $defaultName = 'ezpizee:oauth2:delete-client';
 
     /**
      * @var ClientManagerInterface

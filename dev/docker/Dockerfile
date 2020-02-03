@@ -1,7 +1,7 @@
 ARG PHP_VERSION=7.4.2
 
 FROM php:${PHP_VERSION}-cli-alpine3.11
-LABEL maintainer="Petar Obradović <petar.obradovic@trikoder.net>"
+LABEL maintainer="Ezpizee <development@ezpizee.com>"
 
 ARG COMPOSER_VERSION=1.9.1
 ARG FLEX_VERSION=1.4.8

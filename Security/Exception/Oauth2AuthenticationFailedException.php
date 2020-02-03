@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Security\Exception;
+namespace Ezpizee\Bundle\OAuth2Bundle\Security\Exception;
 
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Tests;
+namespace Ezpizee\Bundle\OAuth2Bundle\Tests;
 
 use LogicException;
 use Nyholm\Psr7\Factory as Nyholm;
@@ -17,14 +17,14 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Routing\RouteCollectionBuilder;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Tests\Fixtures\FixtureFactory;
-use Trikoder\Bundle\OAuth2Bundle\Tests\Fixtures\SecurityTestController;
-use Trikoder\Bundle\OAuth2Bundle\Tests\Support\SqlitePlatform;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Tests\Fixtures\FixtureFactory;
+use Ezpizee\Bundle\OAuth2Bundle\Tests\Fixtures\SecurityTestController;
+use Ezpizee\Bundle\OAuth2Bundle\Tests\Support\SqlitePlatform;
 use Zend\Diactoros as ZendFramework;
 
 final class TestKernel extends Kernel implements CompilerPassInterface
@@ -60,7 +60,7 @@ final class TestKernel extends Kernel implements CompilerPassInterface
             new \Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new \Symfony\Bundle\SecurityBundle\SecurityBundle(),
-            new \Trikoder\Bundle\OAuth2Bundle\TrikoderOAuth2Bundle(),
+            new \Ezpizee\Bundle\OAuth2Bundle\EzpizeeOAuth2Bundle(),
         ];
     }
 
@@ -101,19 +101,19 @@ final class TestKernel extends Kernel implements CompilerPassInterface
      */
     protected function configureRoutes(RouteCollectionBuilder $routes)
     {
-        $routes->import('@TrikoderOAuth2Bundle/Resources/config/routes.xml');
+        $routes->import('@EzpizeeOAuth2Bundle/Resources/config/routes.xml');
 
         $routes
-            ->add('/security-test', 'Trikoder\Bundle\OAuth2Bundle\Tests\Fixtures\SecurityTestController:helloAction')
+            ->add('/security-test', 'Ezpizee\Bundle\OAuth2Bundle\Tests\Fixtures\SecurityTestController:helloAction')
         ;
 
         $routes
-            ->add('/security-test-scopes', 'Trikoder\Bundle\OAuth2Bundle\Tests\Fixtures\SecurityTestController:scopeAction')
+            ->add('/security-test-scopes', 'Ezpizee\Bundle\OAuth2Bundle\Tests\Fixtures\SecurityTestController:scopeAction')
             ->setDefault('oauth2_scopes', ['fancy'])
         ;
 
         $routes
-            ->add('/security-test-roles', 'Trikoder\Bundle\OAuth2Bundle\Tests\Fixtures\SecurityTestController:rolesAction')
+            ->add('/security-test-roles', 'Ezpizee\Bundle\OAuth2Bundle\Tests\Fixtures\SecurityTestController:rolesAction')
             ->setDefault('oauth2_scopes', ['fancy'])
         ;
     }
@@ -169,7 +169,7 @@ final class TestKernel extends Kernel implements CompilerPassInterface
             ],
         ]);
 
-        $container->loadFromExtension('trikoder_oauth2', [
+        $container->loadFromExtension('ezpizee_oauth2', [
             'authorization_server' => [
                 'private_key' => '%env(PRIVATE_KEY_PATH)%',
                 'encryption_key' => '%env(ENCRYPTION_KEY)%',

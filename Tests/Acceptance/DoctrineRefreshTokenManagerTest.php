@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Tests\Acceptance;
+namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Acceptance;
 
 use DateTime;
-use Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\RefreshTokenManager as DoctrineRefreshTokenManager;
-use Trikoder\Bundle\OAuth2Bundle\Model\AccessToken;
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
-use Trikoder\Bundle\OAuth2Bundle\Model\RefreshToken;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\Doctrine\RefreshTokenManager as DoctrineRefreshTokenManager;
+use Ezpizee\Bundle\OAuth2Bundle\Model\AccessToken;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
+use Ezpizee\Bundle\OAuth2Bundle\Model\RefreshToken;
 
 /**
  * @TODO   This should be in the Integration tests folder but the current tests infrastructure would need improvements first.
- * @covers \Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\RefreshTokenManager
+ * @covers \Ezpizee\Bundle\OAuth2Bundle\Manager\Doctrine\RefreshTokenManager
  */
 final class DoctrineRefreshTokenManagerTest extends AbstractAcceptanceTest
 {

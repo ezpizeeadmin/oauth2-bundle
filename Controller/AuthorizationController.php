@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Controller;
+namespace Ezpizee\Bundle\OAuth2Bundle\Controller;
 
 use League\OAuth2\Server\AuthorizationServer;
 use League\OAuth2\Server\Exception\OAuthServerException;
@@ -10,10 +10,10 @@ use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use Trikoder\Bundle\OAuth2Bundle\Converter\UserConverterInterface;
-use Trikoder\Bundle\OAuth2Bundle\Event\AuthorizationRequestResolveEvent;
-use Trikoder\Bundle\OAuth2Bundle\Event\AuthorizationRequestResolveEventFactory;
-use Trikoder\Bundle\OAuth2Bundle\OAuth2Events;
+use Ezpizee\Bundle\OAuth2Bundle\Converter\UserConverterInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Event\AuthorizationRequestResolveEvent;
+use Ezpizee\Bundle\OAuth2Bundle\Event\AuthorizationRequestResolveEventFactory;
+use Ezpizee\Bundle\OAuth2Bundle\OAuth2Events;
 
 final class AuthorizationController
 {

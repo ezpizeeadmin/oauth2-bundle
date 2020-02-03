@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\League\Repository;
+namespace Ezpizee\Bundle\OAuth2Bundle\League\Repository;
 
 use League\OAuth2\Server\Entities\ClientEntityInterface;
 use League\OAuth2\Server\Exception\OAuthServerException;
 use League\OAuth2\Server\Repositories\ScopeRepositoryInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use Trikoder\Bundle\OAuth2Bundle\Converter\ScopeConverterInterface;
-use Trikoder\Bundle\OAuth2Bundle\Event\ScopeResolveEvent;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\Client as ClientModel;
-use Trikoder\Bundle\OAuth2Bundle\Model\Grant as GrantModel;
-use Trikoder\Bundle\OAuth2Bundle\Model\Scope as ScopeModel;
-use Trikoder\Bundle\OAuth2Bundle\OAuth2Events;
+use Ezpizee\Bundle\OAuth2Bundle\Converter\ScopeConverterInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Event\ScopeResolveEvent;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Client as ClientModel;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Grant as GrantModel;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Scope as ScopeModel;
+use Ezpizee\Bundle\OAuth2Bundle\OAuth2Events;
 
 final class ScopeRepository implements ScopeRepositoryInterface
 {

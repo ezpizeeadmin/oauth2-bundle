@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Manager\InMemory;
+namespace Ezpizee\Bundle\OAuth2Bundle\Manager\InMemory;
 
 use DateTime;
-use Trikoder\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\RefreshToken;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Model\RefreshToken;
 
 final class RefreshTokenManager implements RefreshTokenManagerInterface
 {
