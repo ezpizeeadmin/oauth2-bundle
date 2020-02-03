@@ -4,6 +4,14 @@ declare(strict_types=1);
 
 namespace Ezpizee\Bundle\OAuth2Bundle\Tests;
 
+use Ezpizee\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Tests\Fixtures\FixtureFactory;
+use Ezpizee\Bundle\OAuth2Bundle\Tests\Fixtures\SecurityTestController;
+use Ezpizee\Bundle\OAuth2Bundle\Tests\Support\SqlitePlatform;
 use LogicException;
 use Nyholm\Psr7\Factory as Nyholm;
 use Psr\Http\Message\ResponseFactoryInterface;
@@ -17,14 +25,6 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Routing\RouteCollectionBuilder;
-use Ezpizee\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
-use Ezpizee\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
-use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
-use Ezpizee\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
-use Ezpizee\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
-use Ezpizee\Bundle\OAuth2Bundle\Tests\Fixtures\FixtureFactory;
-use Ezpizee\Bundle\OAuth2Bundle\Tests\Fixtures\SecurityTestController;
-use Ezpizee\Bundle\OAuth2Bundle\Tests\Support\SqlitePlatform;
 use Zend\Diactoros as ZendFramework;
 
 final class TestKernel extends Kernel implements CompilerPassInterface

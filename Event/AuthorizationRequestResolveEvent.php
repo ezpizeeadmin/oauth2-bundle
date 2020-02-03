@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Ezpizee\Bundle\OAuth2Bundle\Event;
 
+use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Scope;
 use League\OAuth2\Server\RequestTypes\AuthorizationRequest;
 use LogicException;
 use Psr\Http\Message\ResponseInterface;
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
-use Ezpizee\Bundle\OAuth2Bundle\Model\Scope;
 
 final class AuthorizationRequestResolveEvent extends Event
 {

@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Acceptance;
 
-use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Tester\CommandTester;
 use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
 use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Tester\CommandTester;
 
 /**
  * @covers \Ezpizee\Bundle\OAuth2Bundle\Command\DeleteClientCommand

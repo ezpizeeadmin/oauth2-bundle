@@ -5,14 +5,14 @@ declare(strict_types=1);
 namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Acceptance;
 
 use DateTime;
-use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Tester\CommandTester;
 use Ezpizee\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
 use Ezpizee\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
 use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
 use Ezpizee\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
 use Ezpizee\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
 use Ezpizee\Bundle\OAuth2Bundle\Tests\Fixtures\FixtureFactory;
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Tester\CommandTester;
 
 final class ClearExpiredTokensCommandTest extends AbstractAcceptanceTest
 {

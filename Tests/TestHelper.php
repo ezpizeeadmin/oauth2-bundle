@@ -6,10 +6,6 @@ namespace Ezpizee\Bundle\OAuth2Bundle\Tests;
 
 use Defuse\Crypto\Crypto;
 use Defuse\Crypto\Exception\CryptoException;
-use League\OAuth2\Server\CryptKey;
-use Symfony\Bundle\FrameworkBundle\Console\Application;
-use Symfony\Component\Console\Input\ArrayInput;
-use Symfony\Component\Console\Output\NullOutput;
 use Ezpizee\Bundle\OAuth2Bundle\Converter\ScopeConverter;
 use Ezpizee\Bundle\OAuth2Bundle\League\Entity\AccessToken as AccessTokenEntity;
 use Ezpizee\Bundle\OAuth2Bundle\League\Entity\Client as ClientEntity;
@@ -17,6 +13,10 @@ use Ezpizee\Bundle\OAuth2Bundle\League\Entity\Scope as ScopeEntity;
 use Ezpizee\Bundle\OAuth2Bundle\Model\AccessToken as AccessTokenModel;
 use Ezpizee\Bundle\OAuth2Bundle\Model\AuthorizationCode as AuthorizationCodeModel;
 use Ezpizee\Bundle\OAuth2Bundle\Model\RefreshToken as RefreshTokenModel;
+use League\OAuth2\Server\CryptKey;
+use Symfony\Bundle\FrameworkBundle\Console\Application;
+use Symfony\Component\Console\Input\ArrayInput;
+use Symfony\Component\Console\Output\NullOutput;
 
 final class TestHelper
 {

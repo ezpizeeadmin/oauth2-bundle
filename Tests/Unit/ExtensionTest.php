@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Unit;
 
+use Ezpizee\Bundle\OAuth2Bundle\DependencyInjection\EzpizeeOAuth2Extension;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\InMemory\ScopeManager;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
 use League\OAuth2\Server\AuthorizationServer;
 use League\OAuth2\Server\Grant\ClientCredentialsGrant;
 use League\OAuth2\Server\Grant\PasswordGrant;
 use League\OAuth2\Server\Grant\RefreshTokenGrant;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Ezpizee\Bundle\OAuth2Bundle\DependencyInjection\EzpizeeOAuth2Extension;
-use Ezpizee\Bundle\OAuth2Bundle\Manager\InMemory\ScopeManager;
-use Ezpizee\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
 
 final class ExtensionTest extends TestCase
 {

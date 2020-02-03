@@ -7,6 +7,17 @@ namespace Ezpizee\Bundle\OAuth2Bundle\DependencyInjection;
 use DateInterval;
 use Defuse\Crypto\Key;
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
+use Ezpizee\Bundle\OAuth2Bundle\DBAL\Type\Grant as GrantType;
+use Ezpizee\Bundle\OAuth2Bundle\DBAL\Type\RedirectUri as RedirectUriType;
+use Ezpizee\Bundle\OAuth2Bundle\DBAL\Type\Scope as ScopeType;
+use Ezpizee\Bundle\OAuth2Bundle\EventListener\ConvertExceptionToResponseListener;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\Doctrine\AccessTokenManager;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\Doctrine\AuthorizationCodeManager;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\Doctrine\ClientManager;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\Doctrine\RefreshTokenManager;
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
+use Ezpizee\Bundle\OAuth2Bundle\Model\Scope as ScopeModel;
+use Ezpizee\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2TokenFactory;
 use League\OAuth2\Server\AuthorizationServer;
 use League\OAuth2\Server\CryptKey;
 use League\OAuth2\Server\Grant\AuthCodeGrant;
@@ -28,17 +39,6 @@ use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\HttpKernel\KernelEvents;
-use Ezpizee\Bundle\OAuth2Bundle\DBAL\Type\Grant as GrantType;
-use Ezpizee\Bundle\OAuth2Bundle\DBAL\Type\RedirectUri as RedirectUriType;
-use Ezpizee\Bundle\OAuth2Bundle\DBAL\Type\Scope as ScopeType;
-use Ezpizee\Bundle\OAuth2Bundle\EventListener\ConvertExceptionToResponseListener;
-use Ezpizee\Bundle\OAuth2Bundle\Manager\Doctrine\AccessTokenManager;
-use Ezpizee\Bundle\OAuth2Bundle\Manager\Doctrine\AuthorizationCodeManager;
-use Ezpizee\Bundle\OAuth2Bundle\Manager\Doctrine\ClientManager;
-use Ezpizee\Bundle\OAuth2Bundle\Manager\Doctrine\RefreshTokenManager;
-use Ezpizee\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
-use Ezpizee\Bundle\OAuth2Bundle\Model\Scope as ScopeModel;
-use Ezpizee\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2TokenFactory;
 
 final class EzpizeeOAuth2Extension extends Extension implements PrependExtensionInterface, CompilerPassInterface
 {

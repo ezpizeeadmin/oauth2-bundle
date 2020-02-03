@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Ezpizee\Bundle\OAuth2Bundle\Command;
 
+use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
 
 final class DeleteClientCommand extends Command
 {

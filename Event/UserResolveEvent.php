@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Ezpizee\Bundle\OAuth2Bundle\Event;
 
-use Symfony\Component\EventDispatcher\Event;
-use Symfony\Component\Security\Core\User\UserInterface;
 use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
 use Ezpizee\Bundle\OAuth2Bundle\Model\Grant;
+use Symfony\Component\EventDispatcher\Event;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 final class UserResolveEvent extends Event
 {

@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Ezpizee\Bundle\OAuth2Bundle;
 
 use Doctrine\Bundle\DoctrineBundle\DependencyInjection\Compiler\DoctrineOrmMappingsPass;
+use Ezpizee\Bundle\OAuth2Bundle\DependencyInjection\EzpizeeOAuth2Extension;
+use Ezpizee\Bundle\OAuth2Bundle\DependencyInjection\Security\OAuth2Factory;
 use Symfony\Bundle\SecurityBundle\DependencyInjection\SecurityExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use Ezpizee\Bundle\OAuth2Bundle\DependencyInjection\Security\OAuth2Factory;
-use Ezpizee\Bundle\OAuth2Bundle\DependencyInjection\EzpizeeOAuth2Extension;
 
 final class EzpizeeOAuth2Bundle extends Bundle
 {

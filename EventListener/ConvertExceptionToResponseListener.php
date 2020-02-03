@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Ezpizee\Bundle\OAuth2Bundle\EventListener;
 
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Ezpizee\Bundle\OAuth2Bundle\Security\Exception\InsufficientScopesException;
 use Ezpizee\Bundle\OAuth2Bundle\Security\Exception\Oauth2AuthenticationFailedException;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 
 /**
  * @author Tobias Nyholm <tobias.nyholm@gmail.com>

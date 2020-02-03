@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Ezpizee\Bundle\OAuth2Bundle\League\Repository;
 
-use League\OAuth2\Server\Entities\RefreshTokenEntityInterface;
-use League\OAuth2\Server\Exception\UniqueTokenIdentifierConstraintViolationException;
-use League\OAuth2\Server\Repositories\RefreshTokenRepositoryInterface;
 use Ezpizee\Bundle\OAuth2Bundle\League\Entity\RefreshToken as RefreshTokenEntity;
 use Ezpizee\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
 use Ezpizee\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
 use Ezpizee\Bundle\OAuth2Bundle\Model\RefreshToken as RefreshTokenModel;
+use League\OAuth2\Server\Entities\RefreshTokenEntityInterface;
+use League\OAuth2\Server\Exception\UniqueTokenIdentifierConstraintViolationException;
+use League\OAuth2\Server\Repositories\RefreshTokenRepositoryInterface;
 
 final class RefreshTokenRepository implements RefreshTokenRepositoryInterface
 {

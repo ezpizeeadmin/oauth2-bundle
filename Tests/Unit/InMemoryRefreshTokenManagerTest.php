@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Unit;
 
 use DateTime;
-use PHPUnit\Framework\TestCase;
-use ReflectionProperty;
 use Ezpizee\Bundle\OAuth2Bundle\Manager\InMemory\RefreshTokenManager as InMemoryRefreshTokenManager;
 use Ezpizee\Bundle\OAuth2Bundle\Model\AccessToken;
 use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
 use Ezpizee\Bundle\OAuth2Bundle\Model\RefreshToken;
+use PHPUnit\Framework\TestCase;
+use ReflectionProperty;
 
 final class InMemoryRefreshTokenManagerTest extends TestCase
 {

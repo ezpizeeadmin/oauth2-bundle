@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Ezpizee\Bundle\OAuth2Bundle\Converter;
 
+use Ezpizee\Bundle\OAuth2Bundle\League\Entity\User;
 use League\OAuth2\Server\Entities\UserEntityInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Ezpizee\Bundle\OAuth2Bundle\League\Entity\User;
 
 final class UserConverter implements UserConverterInterface
 {

@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Ezpizee\Bundle\OAuth2Bundle\League\Repository;
 
-use League\OAuth2\Server\Entities\ClientEntityInterface;
-use League\OAuth2\Server\Repositories\UserRepositoryInterface;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Ezpizee\Bundle\OAuth2Bundle\Converter\UserConverterInterface;
 use Ezpizee\Bundle\OAuth2Bundle\Event\UserResolveEvent;
 use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
 use Ezpizee\Bundle\OAuth2Bundle\Model\Grant as GrantModel;
 use Ezpizee\Bundle\OAuth2Bundle\OAuth2Events;
+use League\OAuth2\Server\Entities\ClientEntityInterface;
+use League\OAuth2\Server\Repositories\UserRepositoryInterface;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 final class UserRepository implements UserRepositoryInterface
 {

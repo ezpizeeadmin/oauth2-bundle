@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace Ezpizee\Bundle\OAuth2Bundle\Command;
 
-use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\InputOption;
-use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Style\SymfonyStyle;
 use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientFilter;
 use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
 use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
 use Ezpizee\Bundle\OAuth2Bundle\Model\Grant;
 use Ezpizee\Bundle\OAuth2Bundle\Model\RedirectUri;
 use Ezpizee\Bundle\OAuth2Bundle\Model\Scope;
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Style\SymfonyStyle;
 
 final class ListClientsCommand extends Command
 {

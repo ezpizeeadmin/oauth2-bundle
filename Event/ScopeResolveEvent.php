@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Ezpizee\Bundle\OAuth2Bundle\Event;
 
-use Symfony\Component\EventDispatcher\Event;
 use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
 use Ezpizee\Bundle\OAuth2Bundle\Model\Grant;
 use Ezpizee\Bundle\OAuth2Bundle\Model\Scope;
+use Symfony\Component\EventDispatcher\Event;
 
 final class ScopeResolveEvent extends Event
 {

@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Ezpizee\Bundle\OAuth2Bundle\Security\Firewall;
 
+use Ezpizee\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2Token;
+use Ezpizee\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2TokenFactory;
+use Ezpizee\Bundle\OAuth2Bundle\Security\Exception\InsufficientScopesException;
+use Ezpizee\Bundle\OAuth2Bundle\Security\Exception\Oauth2AuthenticationFailedException;
 use Symfony\Bridge\PsrHttpMessage\HttpMessageFactoryInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
@@ -11,10 +15,6 @@ use Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterfac
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Http\Firewall\ListenerInterface;
-use Ezpizee\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2Token;
-use Ezpizee\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2TokenFactory;
-use Ezpizee\Bundle\OAuth2Bundle\Security\Exception\InsufficientScopesException;
-use Ezpizee\Bundle\OAuth2Bundle\Security\Exception\Oauth2AuthenticationFailedException;
 
 final class OAuth2Listener implements ListenerInterface
 {

@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Ezpizee\Bundle\OAuth2Bundle\League\Repository;
 
-use League\OAuth2\Server\Entities\AccessTokenEntityInterface;
-use League\OAuth2\Server\Entities\ClientEntityInterface;
-use League\OAuth2\Server\Exception\UniqueTokenIdentifierConstraintViolationException;
-use League\OAuth2\Server\Repositories\AccessTokenRepositoryInterface;
 use Ezpizee\Bundle\OAuth2Bundle\Converter\ScopeConverterInterface;
 use Ezpizee\Bundle\OAuth2Bundle\League\Entity\AccessToken as AccessTokenEntity;
 use Ezpizee\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
 use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
 use Ezpizee\Bundle\OAuth2Bundle\Model\AccessToken as AccessTokenModel;
+use League\OAuth2\Server\Entities\AccessTokenEntityInterface;
+use League\OAuth2\Server\Entities\ClientEntityInterface;
+use League\OAuth2\Server\Exception\UniqueTokenIdentifierConstraintViolationException;
+use League\OAuth2\Server\Repositories\AccessTokenRepositoryInterface;
 
 final class AccessTokenRepository implements AccessTokenRepositoryInterface
 {

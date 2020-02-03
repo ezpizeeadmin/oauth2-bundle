@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Ezpizee\Bundle\OAuth2Bundle\Event;
 
-use League\OAuth2\Server\RequestTypes\AuthorizationRequest;
-use RuntimeException;
 use Ezpizee\Bundle\OAuth2Bundle\Converter\ScopeConverterInterface;
 use Ezpizee\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use League\OAuth2\Server\RequestTypes\AuthorizationRequest;
+use RuntimeException;
 
 class AuthorizationRequestResolveEventFactory
 {
