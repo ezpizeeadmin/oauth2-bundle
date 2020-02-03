@@ -7,7 +7,7 @@ namespace Ezpizee\Bundle\OAuth2Bundle\Event;
 use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
 use Ezpizee\Bundle\OAuth2Bundle\Model\Grant;
 use Ezpizee\Bundle\OAuth2Bundle\Model\Scope;
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 
 final class ScopeResolveEvent extends Event
 {

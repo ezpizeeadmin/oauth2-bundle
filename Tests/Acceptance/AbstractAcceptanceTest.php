@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Acceptance;
 
 use Ezpizee\Bundle\OAuth2Bundle\Tests\TestHelper;
-use Symfony\Bundle\FrameworkBundle\Client;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
+use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 abstract class AbstractAcceptanceTest extends WebTestCase
@@ -17,7 +17,7 @@ abstract class AbstractAcceptanceTest extends WebTestCase
     protected $application;
 
     /**
-     * @var Client
+     * @var KernelBrowser
      */
     protected $client;
 

@@ -6,7 +6,6 @@ namespace Ezpizee\Bundle\OAuth2Bundle\Tests\Fixtures;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 final class SecurityTestController extends AbstractController
@@ -28,12 +27,11 @@ final class SecurityTestController extends AbstractController
 
     public function rolesAction(): Response
     {
-        $roles = $this->get('security.token_storage')->getToken()->getRoles();
+        $roles = $this->get('security.token_storage')->getToken()->getUser()->getRoles();
 
-        $roles = array_map(function (Role $role): string {
-            return $role->getRole();
-        }, $roles);
-
+//        $roles = array_map(function (string $role): string {
+//            return $role;
+//        }, $roles);
         return new Response(
             sprintf(
                 'These are the roles I have currently assigned: %s',

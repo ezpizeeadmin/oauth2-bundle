@@ -6,8 +6,8 @@ namespace Ezpizee\Bundle\OAuth2Bundle\Event;
 
 use Ezpizee\Bundle\OAuth2Bundle\Model\Client;
 use Ezpizee\Bundle\OAuth2Bundle\Model\Grant;
-use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Contracts\EventDispatcher\Event;
 
 final class UserResolveEvent extends Event
 {

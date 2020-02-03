@@ -283,7 +283,7 @@ final class EzpizeeOAuth2Extension extends Extension implements PrependExtension
     {
         $scopeManager = $container
             ->getDefinition(
-                $container->getAlias(ScopeManagerInterface::class)
+                (string) $container->getAlias(ScopeManagerInterface::class)
             )
         ;
 

@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "Symfony bundle which provides OAuth 2.0 authorization/resource server capabilities.",
     "keywords": ["oauth2"],
-    "homepage": "http://www.ezpizee.net/",
+    "homepage": "http://www.ezpizee.com/",
     "license": "MIT",
     "authors": [
         {
@@ -13,6 +13,7 @@
     ],
     "require": {
         "php": ">=7.4",
+        "ext-json": "^7.4",
         "doctrine/doctrine-bundle": "^2.0",
         "doctrine/orm": "^2.6",
         "league/oauth2-server": "^7.2",
