@@ -1,5 +1,5 @@
 {
-    "name": "trikoder/oauth2-bundle",
+    "name": "ezpizee/oauth2-bundle",
     "type": "symfony-bundle",
     "description": "Symfony bundle which provides OAuth 2.0 authorization/resource server capabilities.",
     "keywords": ["oauth2"],
