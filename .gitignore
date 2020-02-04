@@ -4,6 +4,7 @@
 # Composer
 composer.lock
 vendor/
+.env
 
 # PHP Coding Standards Fixer
 .php_cs
